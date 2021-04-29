@@ -1,0 +1,23 @@
+
+index.js ==> import  thunk,createStore,applyMiddleware,Provider
+
+create actions and reducer folder
+
+Actions ==> create action creator and call all Api inside action
+
+Reducer==> define a function for each state, declare the initial state value. Make immutable changes to the state using initial state and action payload
+            combine all the reducer using combineReducers
+
+Inside Component
+==> use connect to connect the component with state and action
+==> mapStateToProps is used to extract the state and pass it as prop to the component
+==> we can have filter logic inside mapStateToProps to pass the data that is only required for the component rather than sending the entire state object. To include those logic we might need the component props (eg: "id"). To access the component props we can use "ownProps" as second argument in mapStateToProps. Eg: ownProps.id
+==> we can use the state and action as props inside the component.
+==> Class component ==> this.props.X
+==> function component==> props.X or 
+    destructure in the declaration as 
+    const User=({id,fetchUser})=>{}
+
+
+Lodash is used for memoizing the function, other commands like chain, map, uniq of lodash are introduced.
+
